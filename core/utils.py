@@ -11,7 +11,6 @@ def dictfetchall(cursor):
     ]
 
 
-
 def buscar_status_nicho_banco():
     """Consulta a View SQL vw_status_nicho hospedada no Supabase."""
     query = "SELECT * FROM vw_status_nicho ORDER BY nicho_id ASC;"
