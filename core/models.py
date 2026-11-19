@@ -1,4 +1,3 @@
-
 from django.db import models
 
 # Dias da semana
@@ -22,3 +21,11 @@ class Reservaia(models.Model):
     class Meta:
         managed = False
         db_table = 'tb_chave'
+
+
+class PerfilAcesso(models.TextChoices):
+    MASTER_GERAL = 'MASTER_GERAL', 'Master Geral (Global)'
+    MASTER_UNIDADE = 'MASTER_UNIDADE', 'Master da Unidade'
+    COORDENADOR = 'COORDENADOR', 'Coordenador de Área'
+    DOCENTE = 'DOCENTE', 'Docente'
+    PORTARIA = 'PORTARIA', 'Operador de Portaria'
